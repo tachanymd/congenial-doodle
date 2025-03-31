@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilia -トリリア-</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <audio id="bgm" src="/mp3/Pixel Duel.mp3" loop></audio>
+
+    <script>
+        let audio = document.getElementById("bgm");
+        audio.volume = 0.02; // 🔊 最初の音量を 2% に設定
+    </script>
+
+
+    <div id="titleScreen">
+        <img src="/png/title_logo.png" alt="タイトルロゴ" id="titlelogo">
+        <button id="startButton">GAME START</button>
+        <button id="infoButton">Infomation</button>
+    </div>
+
+    <div id="enemy"></div>
+
+    <div class="Character-wrapper">
+        <img src="/png/player.png" alt="プレイヤー" id="AC">
+        <img src="/png/enemy.png" alt="敵" id="EC">
+    </div>
+
+    <div class="hp-wrapper">
+        <div id="hp-container">
+            <div id="hp-bar"></div>
+        </div>
+        <div id="Ehp-container">
+            <div id="Ehp-bar"></div>
+        </div>
+    </div>
+
+    <div id="status"></div>
+    <div id="log"></div>
+    <div id="infolog"></div>
+    <div id="choices"></div>
+    <div id="ChooseSkillbutton"></div>
+    <div id="totitle">
+        <button-totitle id="totitlebutton"></button-totitle>
+    </div>
+    <div class="full-bg"></div>
+
+    <!-- 各JSファイルを読み込み -->
+    <script type="module" src="js/info.js"></script>
+    <script type="module" src="js/skilllib.js"></script>
+    <script type="module" src="js/data.js"></script>
+    <script type="module" src="js/utils.js"></script>
+    <script type="module" src="js/game.js"></script>
+    <script type="module" src="js/getskill.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
