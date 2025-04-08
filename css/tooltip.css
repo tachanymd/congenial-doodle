@@ -1,0 +1,15 @@
+.tooltip {
+    position: absolute; /* ← 親要素内に配置したいので absolute に */
+    background-color: rgba(255, 255, 200, 0.95);
+    border: 1px solid #888;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-family: 'Potta One', sans-serif;
+    color: #333;
+    pointer-events: none;
+    display: none;
+    z-index: 1000;
+    max-width: 300px;
+    white-space: normal; /* 必要なら折り返し */
+}

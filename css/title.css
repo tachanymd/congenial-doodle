@@ -1,0 +1,108 @@
+#titleScreen h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#titlelogo {
+    width: 30%;  /* 幅を元の50%に縮小 */
+    height: auto; /* アスペクト比を維持 */
+    margin: 20px auto;   /* 上下に余白、左右は自動で中央揃え */
+    display: block;      /* 画像をブロック要素として改行を挿入 */
+    image-rendering: pixelated; /* ドット絵ならこれも追加 */
+}
+
+#titleImage {
+    width: 50%;  /* 幅を元の50%に縮小 */
+    height: auto; /* アスペクト比を維持 */
+    display: block;
+    margin: 20px auto;
+    image-rendering: pixelated; /* ドット絵ならこれも追加 */
+}
+
+#titleScreen {
+    display: block;
+}
+
+button-totitle {
+    margin-top: 5px;
+    display: inline-block;
+    padding: 24px 24px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+
+    background-image: url('../png/door.png');
+    background-size: cover;
+    background-position: center;
+    color: buttontext;
+
+
+    /* 修正ポイント */
+    position: absolute;
+    top: 10px;
+    right: 20px;
+
+    transition: transform 0.2s; /* ← ← 追加！ */
+}
+
+button-totitle:hover {
+    background-image: url('../png/door_open.png');
+    background-size: cover;
+    background-position: center;
+
+    transform: scale(1.05); /* ← ← 追加！ */
+}
+
+button-blocklog {
+    margin-top: 5px;
+    display: inline-block;
+    padding: 24px 24px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-image: url('../png/log.png');  /* 背景に画像を設定 */
+    background-size: cover;  /* 画像をボタンサイズに合わせて調整 */
+    background-position: center; /* 画像の位置を中央に配置 */
+    color: buttontext; /* システムが決めたボタンの文字色 */
+    box-shadow: none;
+    position: absolute;
+    top: 10px;   /* 上からの距離 */
+    right: 70px; /* 右からの距離 */
+    z-index: 1000;            /* 他要素より前面に表示 */
+    transition: transform 0.2s;
+}
+
+button-blocklog:hover{
+    transform: scale(1.05); /* ふわっと拡大 */
+}
+
+
+#totitle {
+    display: none;
+}
+
+#blocklog{
+    display: none;
+}
+
+.full-bg {
+    position: fixed; /* 画面全体を覆う */
+    top: 0;
+    left: 0;
+    width: 100vw; /* ビューポートの幅いっぱい */
+    height: 100vh; /* ビューポートの高さいっぱい */
+    background-color: #dadada; /* 好きな画面背景 */
+    background-position: center; /* 中央配置 */
+    background-repeat: no-repeat; /* 繰り返しなし */
+    z-index: -1; /* 他の要素より後ろに配置 */
+    filter: brightness(100%); /* 明るさを80%に調整 */
+}

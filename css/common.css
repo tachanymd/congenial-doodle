@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    background-color: #222; /* 好きな背景色でOK */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Potta One", sans-serif; /* デフォルトのフォントとして指定 */
+  }
+
+@font-face {
+    font-family: "Potta One"; /* 任意のフォント名 */
+    src: url("./font/rounded-mplus-1c-bold.ttf") format("truetype"); /* フォントファイルのパス */
+}
+
+.fixed-resolution {
+    width: 1152px;
+    height: 648px;
+    background-image: url('../png/title_wallpaper.png'); /* 画像のパス */
+    background-size: cover; /* 画面いっぱいに広げる */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* おしゃれな縁取り */
+    border-radius: 12px; /* 柔らかい雰囲気に */
+    background-position: 50% 60%; /* ← 表示位置を調整 */
+}
+
+#button-container {
+    position: absolute;
+    bottom: 30px; /* 下部に配置 */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row; /* 縦並びにする */
+    align-items: center; /* 横方向の中央揃え */
+    gap: 10px; /* ボタンの間隔 */
+    z-index: 101;
+}
+
+button {
+    display: inline-block;
+    padding: 6px 12px;
+        width: 150px;  /* 幅を固定 */
+        height: 100px;  /* 高さを固定 */
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        background-color: rgb(236, 255, 184); /* システムが決めたボタンの背景色 */
+        color: rgb(20, 20, 20); /* システムが決めたボタンの文字色 */
+        box-shadow: none;
+        border: 1px solid rgb(20, 20, 20);
+        font-family: 'Potta One', sans-serif;
+
+}
+
+/* ホバー時の色変化 */
+button:hover {
+    background-color: rgb(203, 218, 163);  /* マウスを合わせたときの色 */
+}
+
+#log {
+    position: absolute;         /* 画面に固定 */
+    bottom: 10px;               /* 画面の下に配置 */
+    left: 50%;               /* 左端を中央に */
+    transform: translateX(-50%); /* 水平中央に補正 */
+    width: 80%;              /* お好みで幅調整 */
+    height: 200px;
+    overflow-y: scroll;
+    border: 3px solid #163800;
+    padding: 10px;
+    text-align: left;
+    display: none;
+    background-color: rgb(255, 255, 239);
+    color: rgb(20, 20, 20);
+    border-radius: 10px;
+    z-index: 1000;            /* 他要素より前面に表示 */
+}
+
+#log::-webkit-scrollbar {
+    width: 10px; /* スクロールバーの幅 */
+}
+
+#log::-webkit-scrollbar-thumb {
+    background: #f1ce2f; /* スクロールバーの色 */
+    border-radius: 10px; /* 角を丸くする */
+}
+
+#log::-webkit-scrollbar-track {
+    background: rgba(255, 255, 239, 0); /* 背景色 */
+    border-radius: 10px; /* 角を丸くする */
+}
+
+#infolog {
+    position: absolute;
+    margin-top: 80px;
+    width: 1122px;
+    height: 500px;
+    overflow-y: scroll;
+    border: 5px solid #012920;
+    padding: 10px;
+    text-align: left;
+    display: none;
+    background-color: rgb(255, 255, 239); /* 背景を黒に */
+    color: rgb(20, 20, 20); /* 文字を白に */
+}
+
+#infolog::-webkit-scrollbar {
+    width: 10px; /* スクロールバーの幅 */
+}
+
+#infolog::-webkit-scrollbar-thumb {
+    background: #f1ce2f; /* スクロールバーの色 */
+    border-radius: 10px; /* 角を丸くする */
+}
+
+#infolog::-webkit-scrollbar-track {
+    background: rgba(255, 255, 239, 0); /* 背景色 */
+    border-radius: 10px; /* 角を丸くする */
+}
+
+#info {
+    display: none;
+}
+
+.potta-one-regular {
+    font-family: "Potta One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.info-text {
+    font-family: 'Potta One', sans-serif;
+    font-size: 16px; /* 必要なら */
+}
