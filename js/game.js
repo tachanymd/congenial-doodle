@@ -11,6 +11,7 @@ let End = 0, level = 1, Draw = 3;
 export let Choosing = [];
 const ENEMY_ACTION_DELAY = 1000;
 let Pelim = [], Eelim = [];
+let MaxHP = 0;
 
 
 // ゲーム開始
@@ -29,7 +30,7 @@ export function GameStart(enemyActions) {
     E.MaxHP = 1, E.HP = E.MaxHP;
     //テスト用
 
-    let MaxHP = P.MaxHP;
+    MaxHP = P.MaxHP;
 
     Reset("enemy");
 
